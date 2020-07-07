@@ -60,6 +60,20 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+# Example
+
+- See documentation with swagger in [http://localhost:3000/](http://localhost:3000/docs)
+- Documentation with swagger only user module [http://localhost:3000/docs/users/](http://localhost:3000/docs/users/)
+- POST to [http://localhost:3000/users](http://localhost:3000/users)
+
+  ```json
+    {
+      "email": "eamil@gmail.com"
+    }
+  ```
+- Run documentation `npx compodoc -p tsconfig.json -s`
+
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
