@@ -5,6 +5,13 @@ import UsersController from './users.controller';
 
 import UserService from './user.service';
 
+@Module({
+  imports: [],
+  controllers: [UsersController],
+  providers: [UserService],
+})
+export default class UserModule {}
+
 const options = new DocumentBuilder()
   .setTitle('User example')
   .setDescription('The user API description')
@@ -17,10 +24,3 @@ export const userDocument = (app: INestApplication): OpenAPIObject => (
     include: [UserModule],
   })
 );
-
-@Module({
-  imports: [],
-  controllers: [UsersController],
-  providers: [UserService],
-})
-export default class UserModule {}

@@ -12,8 +12,8 @@ export default class UsersController {
   constructor(private readonly userService: UserService) {}
 
   @Post('/')
-  @ApiResponse({ status: 200, description: 'The record has been successfully created.'})
-  @ApiResponse({ status: 400, description: 'Invalid data'})
+  @ApiResponse({ status: 200, description: 'The record has been successfully created.' })
+  @ApiResponse({ status: 400, description: 'Invalid data' })
   create(@Body() createUserDto: CreateUserDto): UserEntity {
     return this.userService.save(createUserDto);
   }

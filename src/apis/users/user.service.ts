@@ -6,14 +6,7 @@ import CreateUserDto from './create.user.dto';
 
 @Injectable()
 export default class UserService {
-  /**
-   * Save an user
-   *
-   * @param {CreateUserDto} data
-   * @returns {UserEntity}
-   * @example
-   * this.userService.save({email: 'email'})
-   */
+  // eslint-disable-next-line class-methods-use-this
   save(data: CreateUserDto): UserEntity {
     const user = new UserEntity();
     user.id = 1;
